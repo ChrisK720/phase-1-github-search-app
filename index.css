@@ -6,8 +6,16 @@
 
 #github-container {
   display: flex;
+  flex-direction: column; /* Change to column layout */
+  align-items: center;
+  text-align: center;
+  
+ 
 }
 
-ul {
-  list-style: none;
+
+
+#repoContainer{
+  text-align: center;
+  float:right;
 }

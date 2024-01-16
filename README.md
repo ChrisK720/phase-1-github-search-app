@@ -1,74 +1,24 @@
 # GitHub Search App
 
-## Learning Goals
+## Author
+Christopher Kirathe
 
-- Practice accessing information from APIs and using it to update the DOM
-- Practice listening for user events and updating the DOM in response
+## Tech stack:
+1) HTML => Used to give page the structure. For example to have a list or the form that is at the top.
 
-## Instructions
+2) CSS => Used to style the page, not that much styling on this project, most of css was used for positioning
 
-You will be using the GitHub API for this project. You can view documentation
-for this API [here](https://developer.github.com/v3/). This is an open API: no
-API key or authentication is required for the endpoints we will be using.
+3) Javascript => Used to manipulate DOM and communicate with server
 
-Notice the GitHub API documentation includes the following excerpt:
+4) External GitHub API => Used to get data to display on screen on submission and also on clicking a user in the initial list
 
-> By default, all requests to <https://api.github.com> receive the v3 version of
-> the REST API. We encourage you to explicitly request this version via the
-> Accept header.
+## AS a user:
 
-They require you to add a custom header to your requests:
-
-```text
-Accept: application/vnd.github.v3+json
-```
-
-### [User Search Endpoint](https://developer.github.com/v3/search/#search-users)
-
-You can search for users matching a certain name. For example, if we wanted to
-find all users named `octocat`, we would make a `GET` request to
-`https://api.github.com/search/users?q=octocat`. To view the response, you can
-copy and paste that URL into your browser.
-
-This endpoint is rate limited. This means the API will stop returning data if
-you make more than
-[10 requests per minute](https://developer.github.com/v3/search/#rate-limit).
-
-### [User Repos Endpoint](https://developer.github.com/v3/repos/#list-user-repositories)
-
-You can find all the public repositories for a user using this endpoint. For
-example if we wanted to find all the repositories for a user with GitHub
-username `octocat`, we would make a `GET` request to
-`https://api.github.com/users/octocat/repos`. To view the response, you can copy
-and paste that URL into your browser.
-
-This endpoint is rate limited. This endpoint will stop returning data if you
-make more than
-[60 requests in an hour](https://developer.github.com/v3/#rate-limiting).
-
-## Deliverables
-
-You are going to build a JavaScript application which searches GitHub for users
-by name and displays the results on the screen. Clicking on a specific user will
-show all the repositories for that user.
-
-1. The `index.html` file has a form with a search input. When the form is
-   submitted, it should take the value of the input and search GitHub for user
-   matches using the [User Search Endpoint](#user-search-endpoint).
-2. Using the results of the search, display information about the users to the
-   page. (You might include showing their username, avatar and a link to their
-   profile.)
-3. Clicking on one of these users should send a request to the
-   [User Repos Endpoint](#user-repos-endpoint) and return data about all the
-   repositories for that user.
-4. Using the response from the Users Repos Endpoint, display all the
-   repositories for that user on the page.
-
-## Bonus
-
-- Toggle the search bar between searching for users by keyword and searching for
-  repos by keyword by adding an extra button. Hint: you can use the same search
-  bar for this, but you may need to create a variable which stores what the
-  current search type is (user or repo). The endpoint to search repositories by
-  keyword is
-  [here](https://developer.github.com/v3/search/#search-repositories).
+1) You will need to enter a username to being with
+2) on submision you will see a list of users with each list item having 3 pieces of information specific to each user. PLEASE BE PATIENT IT MAY TAKE A COUPLE OF SECONDS
+Note: The 3 pices of informaion are:
+   - the username
+   - the user's avatar
+   - a link to the user's GitHub page
+3) to get information on a given user's repositories click the username of the user you are intrested in.
+4) Look at the user's repos on the right side of your screen.
